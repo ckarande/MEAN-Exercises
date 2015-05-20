@@ -1,4 +1,4 @@
-# Tutorial
+# Summary
 
 * [Introduction](README.md)
 * [Securing Application Frontend](frontend/README.md)
