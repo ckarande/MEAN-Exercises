@@ -1,5 +1,5 @@
 {
-  "name": "owasp-nodejs-goat",
+  "name": "MEAN Stack Security",
   "version": "1.3.0",
   "description": "A tool to learn OWASP Top 10 for node.js developers",
   "main": "server.js",
@@ -26,7 +26,7 @@
   "scripts": {
     "start": "node server.js",
     "test": "node node_modules/grunt-cli/bin/grunt test",
-    "db-reset": "node artifacts/db-reset.js"
+    "db-reset": "node app/server/artifacts/db-reset.js"
   },
   "devDependencies": {
     "grunt": "^0.4.5",

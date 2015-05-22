@@ -1,7 +1,6 @@
 "use strict";
 
 var exec = require("child_process").exec;
-var sys = require("sys");
 
 var JS_FILES = ["Gruntfile.js", "app/assets/js/**", "config/config.js", "app/data/**/*.js",
     "app/routes/**/*.js", "server.js", "test/**/*.js"
@@ -118,7 +117,7 @@ module.exports = function(grunt) {
                 verbose: true,
                 packageOnly: true,
                 jsRepository: "https://raw.github.com/bekk/retire.js/master/repository/jsrepository.json",
-                nodeRepository: "https://raw.github.com/bekk/retire.js/master/repository/npmrepository.json",
+                nodeRepository: "https://raw.github.com/bekk/retire.js/master/repository/npmrepository.json"
             }
         }
 
@@ -143,7 +142,7 @@ module.exports = function(grunt) {
 
         done = this.async();
         exec(
-            "NODE_ENV=" + finalEnv + " node artifacts/db-reset.js",
+            "NODE_ENV=" + finalEnv + " node app/server/artifacts/db-reset.js",
             function(err, stdout, stderr) {
                 if (err) {
                     grunt.log.error("db-reset:");
