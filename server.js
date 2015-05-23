@@ -117,7 +117,7 @@ MongoClient.connect(config.db, function(err, db) {
     // Register templating engine
     app.engine(".html", consolidate.swig);
     app.set("view engine", "html");
-    app.set("views", __dirname + "/app/public/views");
+    app.set("views", __dirname + "/app/server/views");
     app.use(express.static(__dirname + "/app/public"));
 
     // Application routes

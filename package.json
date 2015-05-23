@@ -1,5 +1,5 @@
 {
-  "name": "MEAN Stack Security",
+  "name": "MEAN_Stack_Security",
   "version": "1.3.0",
   "description": "A tool to learn OWASP Top 10 for node.js developers",
   "main": "server.js",
