@@ -20,8 +20,12 @@
 
 <body ng-app="retireEasy">
 
-    <div id="wrapper">
-        <div ng-include="'views/layout.html'"></div>
+    <div id="wrapper" ng-controller="NavCtrl as vm">
+        <div ng-include="'pages/nav/nav.html'"></div>
+        <div id="page-wrapper">
+            <div ng-include="'pages/nav/breadcrumb.html'"></div>
+            <div ui-view></div>
+        </div>
     </div>
     <!-- /#wrapper -->
 
@@ -36,8 +40,10 @@
     <script src="assets/js/chart/chart-data-morris.js"></script>
     <!-- Application Specific Scripts -->
     <script src="app.js"></script>
-
-
+    <script src="pages/allocations/allocationsCtrl.js"></script>
+    <script src="pages/benefits/benefitsCtrl.js"></script>
+    <script src="pages/contributions/contributionsCtrl.js"></script>
+    <script src="pages/profile/profileCtrl.js"></script>
     <!-- Load live reload script -->
     <script>
     document.write("<script src='//" + (location.host || "localhost").split(":")[0] + ":35729/livereload.js'></" + "script>");

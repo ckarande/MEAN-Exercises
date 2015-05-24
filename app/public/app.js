@@ -7,31 +7,36 @@
         $stateProvider
             .state("/", {
                 url: "/dashboard",
-                templateUrl: "views/dashboard.html"
+                templateUrl: "pages/dashboard/dashboard.html"
             })
             .state("dashboard", {
                 url: "/dashboard",
-                templateUrl: "views/dashboard.html"
+                templateUrl: "pages/dashboard/dashboard.html"
             })
             .state("contributions", {
                 url: "/contributions",
-                templateUrl: "views/contributions.html"
+                templateUrl: "pages/contributions/contributions.html",
+                controller: "ContributionsCtrl as vm"
             })
             .state("allocations", {
                 url: "/allocations/:userId",
-                templateUrl: "views/allocations.html"
+                templateUrl: "pages/allocations/allocations.html",
+                controller: "AllocationsCtrl as vm"
             })
             .state("profile", {
                 url: "/profile",
-                templateUrl: "views/profile.html"
-            }).state("benefits", {
+                templateUrl: "pages/profile/profile.html",
+                controller: "ProfileCtrl as vm"
+            })
+            .state("benefits", {
                 url: "/benefits",
-                templateUrl: "views/benefits.html"
+                templateUrl: "pages/benefits/benefits.html",
+                controller: "BenefitsCtrl as vm"
             });
-            //.state.go("/dashboard");
+
     }]);
 
-    app.controller('LayoutCtrl', function(){
+    app.controller('NavCtrl', function(){
         var vm = this;
         vm.user = {
             isAdmin: false
