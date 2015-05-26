@@ -16,7 +16,13 @@
             .state("contributions", {
                 url: "/contributions",
                 templateUrl: "pages/contributions/contributions.html",
-                controller: "ContributionsCtrl as vm"
+                controller: "ContributionsCtrl as vm" /*,
+                resolve: {
+                    contributionsResource: "contributionsResource",
+                    contributions: function (contributionsResource) {
+                        return contributionsResource.get().$promise;
+                    }
+                }*/
             })
             .state("allocations", {
                 url: "/allocations/:userId",
@@ -46,7 +52,6 @@
 
         vm.firstName= "c";
         vm.lastName= "k";
-
     });
 
 })();
