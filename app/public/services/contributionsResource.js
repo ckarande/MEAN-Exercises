@@ -8,7 +8,7 @@
                     contributionsResource]);
 
     function contributionsResource($resource) {
-        return $resource("/api/contributions")
+        return $resource("/api/contributions");
     }
 
 }());

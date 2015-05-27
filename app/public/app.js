@@ -1,8 +1,11 @@
 (function(){
     'use strict';
-    var app = angular.module('retireEasy', ['ui.router']);
+    var app = angular.module("retireEasy",
+        ["ui.router",
+            "common.services",
+            "contributionsResourceMock"]);
 
-    app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider){
+    app.config(["$stateProvider", "$urlRouterProvider", function ($stateProvider, $urlRouterProvider){
         $urlRouterProvider.otherwise("/dashboard");
         $stateProvider
             .state("/", {
@@ -16,7 +19,7 @@
             .state("contributions", {
                 url: "/contributions",
                 templateUrl: "pages/contributions/contributions.html",
-                controller: "ContributionsCtrl as vm" /*,
+                controller: "ContributionsCtrl as vm"/*,
                 resolve: {
                     contributionsResource: "contributionsResource",
                     contributions: function (contributionsResource) {
