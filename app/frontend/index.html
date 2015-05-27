@@ -18,7 +18,7 @@
     <!--[if lt IE 9]><script src="assets/external/html5shiv.js"><![endif]-->
 </head>
 
-<body ng-app="retireEasy">
+<body ng-app="app">
 
     <div id="wrapper" ng-controller="NavCtrl as vm">
         <div ng-include="'pages/nav/nav.html'"></div>
@@ -41,10 +41,14 @@
     <!-- Home page Chart data -->
     <script src="assets/js/chart/chart-data-morris.js"></script>
     <!-- Application Specific Scripts -->
+    <script src="core/core.module.js"></script>
     <script src="app.js"></script>
-    <script src="services/common.services.js"></script>
-    <script src="services/contributionsResource.js"></script>
-    <script src="services/contributionsResourceMock.js"></script>
+    <script src="services/resources/resources.module.js"></script>
+    <script src="services/resources/contributionsResource.js"></script>
+    <script src="services/mock/mock.module.js"></script>
+    <script src="services/mock/contributionsResourceMock.js"></script>
+
+    <script src="pages/pages.module.js"></script>
     <script src="pages/allocations/allocationsCtrl.js"></script>
     <script src="pages/benefits/benefitsCtrl.js"></script>
     <script src="pages/contributions/contributionsCtrl.js"></script>

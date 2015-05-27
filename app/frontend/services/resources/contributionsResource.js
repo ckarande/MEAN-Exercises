@@ -2,7 +2,7 @@
     "use strict";
 
     angular
-        .module("common.services")
+        .module("app.services.resources")
         .factory("contributionsResource",
                 ["$resource",
                     contributionsResource]);

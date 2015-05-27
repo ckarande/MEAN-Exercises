@@ -66,7 +66,7 @@ MongoClient.connect(config.db, function(err, db) {
     */
 
     // Adding/ remove HTTP Headers for security
-    app.use(favicon(__dirname + "/app/public/assets/favicon.ico"));
+    app.use(favicon(__dirname + "/app/client/assets/favicon.ico"));
 
     // Express middleware to populate "req.body" so we can access POST variables
     app.use(bodyParser.json());
@@ -118,7 +118,7 @@ MongoClient.connect(config.db, function(err, db) {
     app.engine(".html", consolidate.swig);
     app.set("view engine", "html");
     app.set("views", __dirname + "/app/server/views");
-    app.use(express.static(__dirname + "/app/public"));
+    app.use(express.static(__dirname + "/app/frontend"));
 
     // Application routes
     routes(app, db);

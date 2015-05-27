@@ -1,5 +1,5 @@
 (function(){
-    angular.module("retireEasy")
+    angular.module("app.pages")
         .controller("ProfileCtrl", [ProfileCtrl]);
 
     function ProfileCtrl () {

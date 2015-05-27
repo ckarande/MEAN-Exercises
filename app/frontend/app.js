@@ -1,8 +1,9 @@
 (function(){
     'use strict';
-    var app = angular.module("retireEasy",
-        ["ui.router",
-            "common.services",
+    var app = angular.module("app",
+        ["app.core",
+            "app.pages",
+            "app.services.resources",
             "contributionsResourceMock"]);
 
     app.config(["$stateProvider", "$urlRouterProvider", function ($stateProvider, $urlRouterProvider){
