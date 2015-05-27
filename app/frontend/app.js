@@ -1,10 +1,17 @@
 (function(){
     'use strict';
     var app = angular.module("app",
-        ["app.core",
+        [   // angular specific dependencies
+            "ngResource",
+            "ui.router",
+            // app specific dependencies
             "app.pages",
             "app.services.resources",
-            "contributionsResourceMock"]);
+            //mocks
+            "contributionsResourceMock",
+            "allocationsResourceMock",
+            "profileResourceMock",
+            "benefitsResourceMock"]);
 
     app.config(["$stateProvider", "$urlRouterProvider", function ($stateProvider, $urlRouterProvider){
         $urlRouterProvider.otherwise("/dashboard");
@@ -49,7 +56,7 @@
     app.controller('NavCtrl', function(){
         var vm = this;
         vm.user = {
-            isAdmin: false
+            isAdmin: true
         };
         vm.userId = 3;
         vm.title = 'dashboard';

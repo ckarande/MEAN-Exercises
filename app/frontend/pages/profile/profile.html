@@ -1,7 +1,7 @@
 
 <div class="row">
     <div class="col-lg-12">
-        <div class="row" ng-show="vm.updateSuccess">
+        <div class="row" ng-show="vm.profile.updateSuccess">
             <div class="col-lg-12">
                 <div class="alert alert-dismissable alert-success">
                     <button type="button" class="close" data-dismiss="alert">&times;</button>
@@ -24,33 +24,33 @@
                 <form role="form" method="post" action="/profile">
                     <div class="form-group">
                         <label for="firstName">First Name</label>
-                        <input type="text" class="form-control" id="firstName" name="firstName" value="{{vm.firstName}}" placeholder="Enter first name">
+                        <input type="text" class="form-control" id="firstName" name="firstName" value="{{vm.profile.firstName}}" placeholder="Enter first name">
                     </div>
                     <div class="form-group">
                         <label for="lastName">Last Name</label>
-                        <input type="text" class="form-control" id="lastName" name="lastName" value="{{vm.lastName}}" placeholder="Enter last name">
+                        <input type="text" class="form-control" id="lastName" name="lastName" value="{{vm.profile.lastName}}" placeholder="Enter last name">
                     </div>
                     <div class="form-group">
                         <label for="ssn">SSN</label>
-                        <input type="text" class="form-control" id="ssn" name="ssn" value="{{vm.ssn}}" placeholder="Enter SSN">
+                        <input type="text" class="form-control" id="ssn" name="ssn" value="{{vm.profile.ssn}}" placeholder="Enter SSN">
                     </div>
                     <div class="form-group">
                         <label for="dob">Date of Birth</label>
-                        <input type="date" class="form-control" id="dob" name="dob" value="{{vm.dob|date}}" placeholder="Enter date of birth">
+                        <input type="date" class="form-control" id="dob" name="dob" value="{{vm.profile.dob|date}}" placeholder="Enter date of birth">
                     </div>
                     <div class="form-group">
                         <label for="bankAcc">Bank Account #</label>
-                        <input type="text" class="form-control" id="bankAcc" name="bankAcc" value="{{vm.bankAcc}}" placeholder="Enter bank account number">
+                        <input type="text" class="form-control" id="bankAcc" name="bankAcc" value="{{vm.profile.bankAcc}}" placeholder="Enter bank account number">
                     </div>
                     <div class="form-group">
                         <label for="bankRouting">Bank Routing #</label>
-                        <input type="text" class="form-control" id="bankRouting" name="bankRouting" value="{{vm.bankRouting}}" placeholder="Enter bank routing number">
+                        <input type="text" class="form-control" id="bankRouting" name="bankRouting" value="{{vm.profile.bankRouting}}" placeholder="Enter bank routing number">
                     </div>
                     <div class="form-group">
                         <label for="address">Address</label>
-                        <input type="text" class="form-control" id="address" name="address" value="{{vm.address}}" placeholder="Enter address">
+                        <input type="text" class="form-control" id="address" name="address" value="{{vm.profile.address}}" placeholder="Enter address">
                     </div>
-                    <input type="hidden" name="_csrf" value="{{vm.csrftoken}}" />
+                    <input type="hidden" name="_csrf" value="{{vm.profile.csrftoken}}" />
                     <button type="submit" class="btn btn-default">Submit</button>
                 </form>
             </div>

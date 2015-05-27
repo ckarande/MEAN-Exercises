@@ -1,12 +1,13 @@
 (function(){
     angular.module("app.pages")
-        .controller("BenefitsCtrl", [BenefitsCtrl]);
+        .controller("BenefitsCtrl",
+        ["benefitsResource",
+            BenefitsCtrl]);
 
-    function BenefitsCtrl () {
+    function BenefitsCtrl (benefitsResource) {
         var vm  = this;
-        vm.firstName = "c";
-        vm.lastname = "k";
-        vm._id = "10";
-        vm.benefitsStartDate = "12-2-2039";
+        benefitsResource.query(function(data) {
+            vm.benefits = data[0];
+        });
     }
 })();

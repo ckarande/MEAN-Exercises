@@ -3,17 +3,17 @@
 
         <div class="panel panel-default">
             <div class="panel-heading">
-                <strong>Asset Allocations for {{vm.firstName}} {{vm.lastName}}</strong>
+                <strong>Asset Allocations for {{vm.allocations.firstName}} {{vm.allocations.lastName}}</strong>
             </div>
             <div class="panel-body">
                 <p>Domestic Stocks :
-                    <strong>{{vm.stocks}} %</strong>
+                    <strong>{{vm.allocations.stocks}} %</strong>
                 </p>
                 <p>Funds:
-                    <strong>{{vm.funds}} %</strong>
+                    <strong>{{vm.allocations.funds}} %</strong>
                 </p>
                 <p>Bonds:
-                    <strong>{{vm.bonds}} %</strong>
+                    <strong>{{vm.allocations.bonds}} %</strong>
                 </p>
             </div>
         </div>

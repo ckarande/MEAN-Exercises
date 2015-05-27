@@ -1,13 +1,13 @@
 (function(){
     angular.module("app.pages")
-        .controller("ProfileCtrl", [ProfileCtrl]);
+        .controller("ProfileCtrl",
+        ["profileResource",
+            ProfileCtrl]);
 
-    function ProfileCtrl () {
+    function ProfileCtrl (profileResource) {
         var vm  = this;
-        vm.firstName = "a";
-        vm.lastName = "b";
-        vm.bankAcc = "10";
-        vm.bankRouting = "2222";
-        vm.ssn = "1222";
+        profileResource.query(function(data) {
+            vm.profile = data[0];
+        });
     }
 })();
